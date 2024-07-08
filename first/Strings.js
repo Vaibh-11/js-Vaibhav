@@ -24,5 +24,5 @@ console.log("   vaibhav   ".trim());
 let url="solanki/localhost/index%20php"
 console.log(url.replace('%20','.'))
 console.log(url.includes("php"));
-
+console.log();
 console.log(gameName.split('-'));
