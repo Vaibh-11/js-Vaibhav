@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            Javascript
+        </li>
+    </ul>
+</body>
+<script>
+    const ul=document.querySelector('ul')
+    const li=document.createElement('li')
+    li.innerHTML="java"
+    ul.appendChild(li)
+    console.log(ul);
+// Do same things using Function
+function addLang(langName) {
+    const lii=document.createElement('li')
+    const ull=document.querySelector('ul')
+    lii.innerHTML=langName
+    ul.appendChild(lii)
+}
+//optimal way
+function langOp(langName) {
+    const ul=document.querySelector('ul')
+    const li=document.createElement('li')
+    const adding=li.appendChild(document.createTextNode(langName))
+    ul.appendChild(li)
+}
+addLang("ruby")
+langOp('pythun')
+//To edit One way with innerHtml and another as follow
+const llli=document.querySelector('li:nth-child(2)')
+const newLi=document.createElement('li')
+newLi.textContent="Ds"
+llli.replaceWith(newLi)
+//Aother Way to editt
+const firstLang=document.querySelector('li:first-child')
+firstLang.outerHTML='<li>Typescript</li>'
+
+//to remove
+const lastEle=document.querySelector('li:last-child')
+lastEle.remove()
+</script>
+</html>
